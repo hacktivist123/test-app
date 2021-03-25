@@ -1,3 +1,4 @@
+language: go
 before_deploy: 'echo deployment is starting.....'
 deploy:
   provider: cloudfoundry
