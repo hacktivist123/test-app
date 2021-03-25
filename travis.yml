@@ -1,0 +1,12 @@
+before_deploy: 'echo deployment is starting.....'
+deploy:
+  provider: cloudfoundry
+  edge: true
+  username: admin
+  password: $CF_PASSWORD
+  api: http://api.35.192.46.62.xip.io --skip-ssl-validation
+  organization: sampleOrg
+  space: shedrack
+  app_name: exchange-value
+after_deploy:
+  - cf apps
